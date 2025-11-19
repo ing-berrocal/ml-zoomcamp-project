@@ -123,6 +123,13 @@ docker pull dberrocal/ml-zoomcamp:v0.0
 
 ```
 
+Running APP
+
+```
+https://ml-zoomcamp-b4eyczfjfthagrb0.canadacentral-01.azurewebsites.net
+
+```
+
 ## Test
 
 There a POSTMAN collection 
