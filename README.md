@@ -104,3 +104,56 @@ This project include 3 scripts
 pip install requirements.txt
 
 ```
+
+## Run app
+
+Run script
+
+```python
+
+python ml-app.py
+
+```
+
+Run docker image
+
+```bash
+
+docker pull dberrocal/ml-zoomcamp:v0.0
+
+```
+
+## Test
+
+There a POSTMAN collection 
+
+
+```curl
+
+curl --location 'http://localhost:8000/predict' \
+--header 'Content-Type: application/json' \
+--data '{
+    "year": 2015.0,
+    "adult_mortality": 263.0,
+    "infant_deaths": 62.0,
+    "alcohol": 0.01,
+    "percentage_expenditure": 71.27962362,
+    "hepatitis_b": 65.0,
+    "measles": 1154.0,
+    "bmi": 19.1,
+    "under-five_deaths": 83.0,
+    "polio": 6.0,
+    "total_expenditure": 8.16,
+    "diphtheria": 65.0,
+    "hiv_aids": 0.2,
+    "gdp": 584.25921,
+    "population": 33736494.0,
+    "thinness__1-19_years": 17.2,
+    "thinness_5-9_years": 17.3,
+    "income_composition_of_resources": 0.479,
+    "schooling": 10.1,
+    "country_idx": 0.0,
+    "status_idx": 0.0
+}'
+
+```

@@ -39,17 +39,17 @@ except Exception as e:
 
 class LifeExpectancyInput(BaseModel):
     """Modelo de entrada para la predicción de expectativa de vida"""
+    year: int = Field(..., example=2015, description="Year")
     adult_mortality: float = Field(..., example=263.0, description="Mortalidad adulta por 1000 habitantes")
     infant_deaths: Optional[float] = Field(62.0, example=62.0, description="Muertes infantiles por 1000 nacimientos")
     alcohol: Optional[float] = Field(0.01, example=0.01, description="Consumo de alcohol per cápita (litros)")
-    percentage_expenditure: Optional[float] = Field(71.28, example=71.28, description="Gasto en salud como % del PIB")
-    hepatitis_b: Optional[float] = Field(65.0, example=65.0, description="Cobertura de vacunación Hepatitis B (%)")
     bmi: Optional[float] = Field(19.1, example=19.1, description="Índice de masa corporal promedio")
-    under_five_deaths: Optional[float] = Field(83.0, example=83.0, description="Muertes menores de 5 años por 1000 nacimientos")
+    under_five_deaths: Optional[float] = Field(83.0, example=83.0, alias="under-five_deaths", description="Muertes menores de 5 años por 1000 nacimientos")
     polio: Optional[float] = Field(6.0, example=6.0, description="Cobertura de vacunación Polio (%)")
     total_expenditure: Optional[float] = Field(8.16, example=8.16, description="Gasto total en salud (% del PIB)")
     diphtheria: Optional[float] = Field(65.0, example=65.0, description="Cobertura de vacunación Difteria (%)")
     hiv_aids: Optional[float] = Field(0.1, example=0.1, alias="hiv/aids", description="Muertes por VIH/SIDA por 1000 nacimientos")
+    population: Optional[float] = Field(33736494.0, example=33736494.0, description="Población total")
     thinness_1_19_years: Optional[float] = Field(17.2, example=17.2, alias="thinness__1-19_years", description="Prevalencia de delgadez 10-19 años (%)")
     thinness_5_9_years: Optional[float] = Field(17.3, example=17.3, alias="thinness_5-9_years", description="Prevalencia de delgadez 5-9 años (%)")
     income_composition_of_resources: Optional[float] = Field(0.479, example=0.479, description="Índice de desarrollo de recursos humanos")

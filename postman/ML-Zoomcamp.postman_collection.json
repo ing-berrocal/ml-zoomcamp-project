@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "fa6f61fb-9e03-4edf-b9ac-0296a6a03d5c",
+		"name": "ML-Zoomcamp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3103414"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"year\": 2015.0,\r\n    \"adult_mortality\": 263.0,\r\n    \"infant_deaths\": 62.0,\r\n    \"alcohol\": 0.01,\r\n    \"percentage_expenditure\": 71.27962362,\r\n    \"hepatitis_b\": 65.0,\r\n    \"measles\": 1154.0,\r\n    \"bmi\": 19.1,\r\n    \"under-five_deaths\": 83.0,\r\n    \"polio\": 6.0,\r\n    \"total_expenditure\": 8.16,\r\n    \"diphtheria\": 65.0,\r\n    \"hiv_aids\": 0.2,\r\n    \"gdp\": 584.25921,\r\n    \"population\": 33736494.0,\r\n    \"thinness__1-19_years\": 17.2,\r\n    \"thinness_5-9_years\": 17.3,\r\n    \"income_composition_of_resources\": 0.479,\r\n    \"schooling\": 10.1,\r\n    \"country_idx\": 0.0,\r\n    \"status_idx\": 0.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/predict",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
