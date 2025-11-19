@@ -94,20 +94,21 @@ The exploratory data analysis revealed important insights about the life expecta
 
 This project include 3 scripts
 
-- train : Load, Clean, Train, Hyperparameter model
+- train : Notebook Load, Clean, Train, Hyperparameter model
 - predict: Predict model
 - ml-app: FastAPI app, predict service
 
 ## Install required dependencies:
 
 ```python
+
 pip install requirements.txt
 
 ```
 
 ## Run app
 
-Run script
+Run script, execute FastAPI app
 
 ```python
 
@@ -115,15 +116,28 @@ python ml-app.py
 
 ```
 
-Run docker image
+Download Docker Image
 
 ```bash
 
 docker pull dberrocal/ml-zoomcamp:v0.0
 
+docker run --rm -p 8000:8000 dberrocal/ml-zoomcamp:v0.0
+
 ```
 
+Or if you want to build the image
+
+```bash
+
+docker build -f Docker/Dockerfile . -t ml-zoomcamp:v0.0
+
+```
+
+
 Running APP
+
+Endpoint, enabled for a few days
 
 ```
 https://ml-zoomcamp-b4eyczfjfthagrb0.canadacentral-01.azurewebsites.net
@@ -132,8 +146,17 @@ https://ml-zoomcamp-b4eyczfjfthagrb0.canadacentral-01.azurewebsites.net
 
 ## Test
 
-There a POSTMAN collection 
+There a POSTMAN collection, contains a json example
 
+Cloud
+![Deployment](images/deploy.png)
+
+
+Local
+![Local](images/local.png)
+
+
+Or curl command
 
 ```curl
 
